@@ -4,7 +4,6 @@ console.log(tableData);
 
 // Table References
 var tbody = d3.select("tbody");
-var inputTbody = d3.select("tbody");
 
 // Define functions
 var inputDate = d3.select("#datetime");
@@ -44,7 +43,7 @@ filtButton.on("click", function() {
     var filtData = tableData.filter(fData => (fData.datetime == dateValue));
     console.log(filtData);
     //Clear all previuos data from UFO table
-    inputTbody.html("");
+    tbody.html("");
     buildTable(filtData);
 });
 
